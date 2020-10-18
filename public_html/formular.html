@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responzivita</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Formulář</h1>
+        </header>            
+        <nav>
+            <a href="index.html">Fotogalerie</a>
+            <a href="formular.html">Formulář</a>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <form action="formular.html" method="POST" enctype="multipart/form-data" id="hlavni-formular" name="mujFormular">
+                <div class='line'>
+                    <div class='half'>
+                        <input type="text" name="jmeno" placeholder="Jméno" required>
+                    </div>
+                    <div class='half'>
+                        <input type="password" name="heslo" placeholder="Heslo" required>
+                    </div>
+                </div>
+                
+                
+                <input type="number" step="1" min="0" max="120" name="vek" placeholder="Věk" required>
+                <label>Datum narození: </label>
+                <input type="date" name="datum" value="1999-01-01" max="1930-01-01" min="2020-10-18" >
+                <label>Oblíbená barva: </label>
+                <input type="color" name="barva">
+                <input type="tel" name="telefon" placeholder="Telefon">
+                <input type="email" name="mail" placeholder="Email" required="">
+                <label>Vaše fotografie:  </label>
+                <input type="file" name="soubory">
+
+                <textarea name="textovaoblast" cols="10" rows="10">
+                Napište nám Vás dotaz.
+                </textarea>
+                
+                <select name="vzdelani">
+                    <option value="bv">Bez vzdělání</option>
+                    <option value="zv" selected>Základní vzdělání</option>
+                    <option value="sv">Středoškolské vzdělání</option>
+                    <option value="vv">Vysokoškolské vzdělání</option>
+                </select>                
+
+                <fieldset>
+                    <legend>Pohlaví</legend>
+                    <label><input type="radio" name="pohlavi" value='muz'>Muž</label>
+                    <label><input type="radio" name="pohlavi" value='zena'>Žena</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Koníčky</legend>
+                    <label><input type="checkbox" name="konicek[]" value='1'>Sport</label>
+                    <label><input type="checkbox" name="konicek[]" value='2'>Turistika</label>
+                    <label><input type="checkbox" name="konicek[]" value='3'>Čtení knih</label>
+                    <label><input type="checkbox" name="konicek[]" value='4'>Sledování videí (filmů, seriálů)</label>
+                </fieldset>
+                <button type="submit">Odeslat</button>
+            </form>
+            </div>
+        </div>
+        <footer>
+            <p>Patička</p>
+        </footer>
+    </body>
+</html>
